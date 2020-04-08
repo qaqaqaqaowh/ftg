@@ -16,7 +16,7 @@ def gen_template(name):
     web_path = join(name, f"{name}_web")
     api_path = join(name, f"{name}_api")
     root = dirname(abspath(__file__))
-    static_path = join(root, "files/static")
+    static_path = join(root, "files", "static")
     static_files = [join(static_path, f) for f in os.listdir(static_path) if isfile(join(static_path, f))]
     for f in static_files:
         copy(f, name)
@@ -29,5 +29,5 @@ def gen_template(name):
     write_file(join(name, "app.py"), app(name))
     write_file(join(name, ".env"), env(name))
     write_file(join(name, "start.py"), start(name))
-    write_file(join(name, f"{name}_web/templates/_layout.html"), templates_layout(name))
+    write_file(join(name, f"{name}_web", "templates", "_layout.html"), templates_layout(name))
 
