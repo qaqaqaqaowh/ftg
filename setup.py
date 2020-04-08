@@ -2,14 +2,15 @@ from setuptools import setup, find_packages
 setup(
   name = 'ftg',
   packages = find_packages(),
-  version = '0.8',
+  version = '0.9',
   license='MIT',
   description = 'A generator for a flask app template',
   author = 'Nicholas Ong Wei Harn',                
   author_email = 'nicholasowh@hotmail.com',   
   url = 'https://github.com/qaqaqaqaowh/ftg',
-  download_url = 'https://github.com/qaqaqaqaowh/ftg/archive/0.8.tar.gz', 
+  download_url = 'https://github.com/qaqaqaqaowh/ftg/archive/0.9.tar.gz', 
   keywords = ['flask', 'template', 'generate'],
+  include_package_data = True,
   install_requires=[         
           'flask',
           'peewee',
