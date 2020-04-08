@@ -22,7 +22,7 @@ def gen_template(name):
         copy(f, name)
     copytree(join(static_path, "web"), web_path)
     copytree(join(static_path, "api"), api_path)
-    copytree(join(static_path, "models"), name)
+    copytree(join(static_path, "models"), join(name, "models"))
     os.makedirs(join(api_path, "blueprints"))
     os.makedirs(join(web_path, "blueprints"))
     write_file(join(name, ".gitignore"), gitignore(name))
