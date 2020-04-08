@@ -1,5 +1,5 @@
 import argparse
-from .templates import gen_template
+from templates import gen_template
 
 def main():
     parser = argparse.ArgumentParser(prog='flask-template', description="A flask app template generator.")
