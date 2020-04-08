@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 setup(
   name = 'ftg',
   packages = find_packages(),
-  version = '0.6',
+  version = '0.7',
   license='MIT',
   description = 'A generator for a flask app template',
   author = 'Nicholas Ong Wei Harn',                
   author_email = 'nicholasowh@hotmail.com',   
   url = 'https://github.com/qaqaqaqaowh/ftg',
-  download_url = 'https://github.com/qaqaqaqaowh/ftg/archive/0.6.tar.gz', 
+  download_url = 'https://github.com/qaqaqaqaowh/ftg/archive/0.7.tar.gz', 
   keywords = ['flask', 'template', 'generate'],
   install_requires=[         
           'flask',

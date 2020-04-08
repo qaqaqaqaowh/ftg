@@ -1,8 +1,8 @@
 import os
 from os.path import dirname, abspath, isfile, join
-from utils.write_file import write_file
+from .utils.write_file import write_file
 from shutil import copytree, copy
-from files import (
+from .files import (
     readme,
     gitignore,
     app,
