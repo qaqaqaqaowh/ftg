@@ -29,4 +29,5 @@ def gen_template(name):
     write_file(join(name, ".env"), env(name))
     write_file(join(name, "start.py"), start(name))
     write_file(join(name, f"{name}_web", "templates", "_layout.html"), templates_layout(name))
-
+    os.system(f"pip install -r {join(name, 'requirements.txt')}")
+    os.system(f"pip freeze > {join(name, 'requirements.txt')}")
