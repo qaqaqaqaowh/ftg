@@ -11,17 +11,6 @@ setup(
   download_url = 'https://github.com/qaqaqaqaowh/ftg/archive/1.3.tar.gz', 
   keywords = ['flask', 'template', 'generate'],
   include_package_data = True,
-  install_requires=[         
-          'flask',
-          'peewee',
-          'peewee-db-evolve',
-          'python-dotenv',
-          'psycopg2-binary',
-          'Flask-Assets',
-          'cssmin',
-          'jsmin',
-          'Flask-Cors'
-      ],
   entry_points = {
     'console_scripts': ['ftg=src.__main__:main'],
   },
