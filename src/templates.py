@@ -1,7 +1,7 @@
 import os
-from os.path import dirname, abspath, isfile, join
-from .utils.write_file import write_file
 from shutil import copytree, copy
+from .utils.write_file import write_file
+from os.path import dirname, abspath, isfile, join
 from .files import (
     readme,
     gitignore,
@@ -23,8 +23,6 @@ def gen_template(name):
     copytree(join(static_path, "web"), web_path)
     copytree(join(static_path, "api"), api_path)
     copytree(join(static_path, "models"), join(name, "models"))
-    os.makedirs(join(api_path, "blueprints"))
-    os.makedirs(join(web_path, "blueprints"))
     write_file(join(name, ".gitignore"), gitignore(name))
     write_file(join(name, "README.md"), readme(name))
     write_file(join(name, "app.py"), app(name))
